@@ -2,7 +2,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = repositorios
+PROJECT_NAME = antifraude
 PYTHON_VERSION = 3.10
 PYTHON_INTERPRETER = python
 
@@ -44,8 +44,8 @@ format:
 ## Set up python interpreter environment
 .PHONY: create_environment
 create_environment:
-	@bash -c "if [ ! -z `which virtualenvwrapper.sh` ]; then source `which virtualenvwrapper.sh`; mkvirtualenv $(PROJECT_NAME) --python=$(PYTHON_INTERPRETER); else mkvirtualenv.bat $(PROJECT_NAME) --python=$(PYTHON_INTERPRETER); fi"
-	@echo ">>> New virtualenv created. Activate with:\nworkon $(PROJECT_NAME)"
+	python -m venv venv
+	@echo ">>> New virtualenv created. Activate with:\n.\venv\Scripts\activate"
 	
 
 
