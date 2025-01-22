@@ -5,4 +5,7 @@ pip
 python-dotenv
 pandas
 kaggle
+plotly
+nbformat>=4.2.0
+scikit-learn
 -e .
